@@ -11,8 +11,8 @@ export default function Page() {
   //   });
   // }, 5000);
   return (
-    <main id="banner">
-      <a href={banner[bannerIndex].url}>
+    <a href={banner[bannerIndex].url}>
+      <main id="banner" className="w-full min-h-screen">
         <div className="flex justify-center w-full p-4">
           <Image
             // loader={myLoader}
@@ -23,8 +23,8 @@ export default function Page() {
           />
           <span className="ml-1 ">{banner[bannerIndex].message}</span>
         </div>
-      </a>
-    </main>
+      </main>
+    </a>
   );
 }
 
