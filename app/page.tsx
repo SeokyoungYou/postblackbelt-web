@@ -1,12 +1,21 @@
 "use client";
+import useInterval from "@/hooks/useInterval";
 import React from "react";
 
 export default function Page() {
-  const [bannerIndex, setBannerIndex] = React.useState(0);
+  const [bannerIndex, setBannerIndex] = React.useState<number>(0);
+  console.log(bannerIndex);
+  useInterval(() => {
+    setBannerIndex((prev) => {
+      console.log("prev", prev);
+      // return prev + 1;
+      return prev < banner.length - 1 ? prev + 1 : 0;
+    });
+  }, 5000);
   return (
     <main id="banner">
       <a href={banner[bannerIndex].url}>
-        <div className="flex items-center justify-center w-full h-40">
+        <div className="flex justify-center w-full p-4">
           <h1 className="">{banner[bannerIndex].message}</h1>
         </div>
       </a>
@@ -20,7 +29,11 @@ const banner = [
     url: "https://www.instagram.com/post_black_belt/",
   },
   {
-    message: "",
-    url: "",
+    message: "dd",
+    url: "ddd",
+  },
+  {
+    message: "cc",
+    url: "ddd",
   },
 ];
