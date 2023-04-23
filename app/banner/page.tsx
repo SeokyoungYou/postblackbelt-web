@@ -6,31 +6,25 @@ import { Carousel } from "antd";
 
 export default function BannerPage() {
   return (
-    <Carousel
-      dotPosition="bottom"
-      // autoplay autoplaySpeed={5000}
-    >
+    <Carousel dotPosition="bottom" autoplay autoplaySpeed={5000}>
       <section>
         <div style={contentStyle}>
-          <div className="flex justify-center gap-2 adivgn-center">
+          <div className="flex justify-center gap-1 adivgn-center">
             <Image
-              src="/instagram.png"
+              src="/instagram-filled.png"
               alt="Instagram logo"
-              width={20}
-              height={20}
+              width={24}
+              height={24}
             />
             인스타그램에서 새소식 받기
           </div>
         </div>
       </section>
       <section>
-        <div style={contentStyle}>2</div>
+        <div style={contentStyle}>🔨 앱 업데이트하여 더 많은 기능 사용하기</div>
       </section>
       <section>
-        <div style={contentStyle}>3</div>
-      </section>
-      <section>
-        <div style={contentStyle}>4</div>
+        <div style={contentStyle}>✏️ 설문조사 참여하여 의견을 남겨주세요!</div>
       </section>
     </Carousel>
   );
@@ -57,6 +51,6 @@ const contentStyle: React.CSSProperties = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  background: "#364d79",
+  background: "#5E4B9C",
   paddingTop: "15px",
 };
