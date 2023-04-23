@@ -4,6 +4,9 @@ import React from "react";
 
 import { Carousel } from "antd";
 
+// 상단에 배너
+// 하단에 클릭하여 앱스토어/구글플스 보내기
+
 export default function BannerPage() {
   return (
     <Carousel dotPosition="bottom" autoplay autoplaySpeed={5000}>
@@ -29,21 +32,6 @@ export default function BannerPage() {
     </Carousel>
   );
 }
-
-const banner = [
-  {
-    message: "인스타그램에서 새소식 받기",
-    url: "https://www.instagram.com/post_black_belt/",
-  },
-  // {
-  //   message: "dd",
-  //   url: "ddd",
-  // },
-  // {
-  //   message: "cc",
-  //   url: "ddd",
-  // },
-];
 
 const contentStyle: React.CSSProperties = {
   height: "60px",
