@@ -16,7 +16,7 @@ function FAQ() {
   return (
     <>
       <Title level={5} style={{ marginTop: "20px", marginBottom: "-5px" }}>
-        FAQ(자주 묻는 질문들)
+        FAQ (자주 묻는 질문들)
       </Title>
       <Collapse accordion>
         <Panel header="비밀번호를 잃어버렸어요. 어떻게 찾을 수 있나요?" key="1">
@@ -31,6 +31,13 @@ function FAQ() {
             인스타그램 DM이나 skyu.dev@gmail.com 으로 연락주시면
             답변해드리겠습니다.
           </p>
+        </Panel>
+        <Panel header="앱 내 광고 마케팅이 가능한가요?" key="3">
+          <p>
+            주짓수 관련 광고를 [앱 내 배너] [배너가 연결되는 웹] [인스타그램
+            피드]에 탑재할 수 있으며, 앱 내 배너는 월단위로 게시됩니다.
+          </p>
+          <p>인스타그램 DM이나 skyu.dev@gmail.com로 연락주세요.</p>
         </Panel>
       </Collapse>
     </>

@@ -35,7 +35,7 @@ export default function ProfilePage() {
             <p>아이폰(iOS)</p>
             <a href={`${APP_STORE.ios}`}>
               <Button type="primary" ghost>
-                앱스토어로 이동
+                앱스토어 이동
               </Button>
             </a>
           </section>
@@ -43,19 +43,19 @@ export default function ProfilePage() {
             <p>갤럭시(Android)</p>
             <a href={`${APP_STORE.android}`}>
               <Button type="primary" ghost>
-                구글 플레이스토어로 이동
+                구글 플레이스토어 이동
               </Button>
             </a>
           </section>
         </div>
       </Card>
 
-      <Card>
+      <Card type="inner" title="✏️ 설문조사 참여하기">
         <section className="flex items-center justify-between">
-          <p>✏️ 설문조사에 참여하여 의견을 들려주세요! (약 2 분 소요)</p>
+          <p>여러분의 의견을 들려주세요! (약 2분 소요)</p>
           <a href="https://forms.gle/t3P75wMmDmh2DMzz5">
             <Button type="primary" ghost>
-              설문조사 하러가기
+              설문조사 링크
             </Button>
           </a>
         </section>
