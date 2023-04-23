@@ -1,7 +1,8 @@
 "use client";
 
 import { InfoCircleOutlined } from "@ant-design/icons";
-import { Card, Collapse, Typography } from "antd";
+import { Card, Collapse, Image, Typography } from "antd";
+import Meta from "antd/es/card/Meta";
 import Title from "antd/es/typography/Title";
 
 const { Panel } = Collapse;
@@ -34,10 +35,44 @@ function FAQ() {
         </Panel>
         <Panel header="앱 내 광고 마케팅이 가능한가요?" key="3">
           <p>
-            주짓수 관련 광고를 [앱 내 배너] [배너가 연결되는 웹] [인스타그램
-            피드]에 탑재할 수 있으며, 앱 내 배너는 월단위로 게시됩니다.
+            주짓수 관련 광고를 [3가지 방법]으로 게시할 수 있으며 하단 붉은색
+            박스 영역에 탑재됩니다. 물품 후원으로만 광고가 가능하며 인스타그램
+            DM이나 skyu.dev@gmail.com 으로 연락주세요.
           </p>
-          <p>인스타그램 DM이나 skyu.dev@gmail.com로 연락주세요.</p>
+          <section className="flex flex-col items-center justify-center gap-3 mt-5">
+            <Card
+              hoverable
+              style={{ width: 200 }}
+              cover={
+                <Image width={200} alt="앱 광고 예시" src="/ads/ad_app.png" />
+              }
+            >
+              <Meta title="앱 배너" description="1 개월 게시" />
+            </Card>
+            <Card
+              hoverable
+              style={{ width: 200 }}
+              cover={
+                <Image width={200} alt="웹 광고 예시" src="/ads/ad_web.png" />
+              }
+            >
+              <Meta title="웹 배너" description="1 개월 게시" />
+            </Card>
+            <Card
+              hoverable
+              style={{ width: 200 }}
+              cover={
+                <Image
+                  width={200}
+                  alt="인스타 광고 예시"
+                  src="/ads/ad_insta.png"
+                />
+              }
+            >
+              <Meta title="인스타그램 피드" description="영구 게시" />
+            </Card>
+          </section>
+          <p></p>
         </Panel>
       </Collapse>
     </>

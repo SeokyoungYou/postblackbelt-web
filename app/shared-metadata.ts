@@ -1,1 +1,1 @@
-export const openGraphImage = { images: ["public/og-img.png"] };
+export const openGraphImage = { images: ["/og-img.png"] };
