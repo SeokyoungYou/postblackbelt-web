@@ -5,8 +5,12 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Post Black Belt",
-  description: "주짓수 일기를 위한 웹사이트",
+  title: "Post Black Belt 주짓수 앱",
+  description: "주짓수 일기 작성을 위한 모바일 앱입니다.",
+  openGraph: {
+    title: "Post Black Belt 주짓수 앱",
+    description: "주짓수 일기 작성을 위한 모바일 앱입니다.",
+  },
 };
 
 type RootLayoutProps = {
