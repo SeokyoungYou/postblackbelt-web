@@ -2,13 +2,11 @@ import React from "react";
 // These styles apply to every route in the application
 import "../globals.css";
 
-type BannerDetailLayoutProps = {
+type ProfileLayoutProps = {
   children: React.ReactNode;
 };
 
-export default function BannerDetailLayout({
-  children,
-}: BannerDetailLayoutProps) {
+export default function ProfileLayout({ children }: ProfileLayoutProps) {
   return (
     <html lang="en">
       <head>
