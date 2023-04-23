@@ -1,6 +1,7 @@
 import React from "react";
 // These styles apply to every route in the application
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
+        <GoogleAnalytics />
         <title>Post Black Belt</title>
       </head>
       <body>{children}</body>
