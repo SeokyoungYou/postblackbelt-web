@@ -14,7 +14,7 @@ const APP_STORE = {
 export default function ProfilePage() {
   const searchParams = useSearchParams();
 
-  const os: "android" | "ios" = searchParams.get("os") || "ios";
+  const os = searchParams.get("os");
   const email = searchParams.get("email");
 
   return (
