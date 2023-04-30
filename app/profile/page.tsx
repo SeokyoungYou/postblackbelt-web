@@ -19,7 +19,7 @@ export default function ProfilePage() {
 
   return (
     <main className="flex flex-col gap-4 p-4">
-      <a href="https://www.instagram.com/post_black_belt/">
+      <a id="instgram-button" href="https://www.instagram.com/post_black_belt/">
         <Card type="inner" title="인스타그램 계정 팔로우하기">
           <Meta
             avatar={<Avatar src="/instagram-filled.png" />}
