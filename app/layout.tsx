@@ -3,6 +3,7 @@ import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import { openGraphImage } from "./shared-metadata";
+import Script from "next/script";
 
 export const metadata = {
   title: "Post Black Belt 주짓수 앱",
@@ -22,9 +23,28 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
       <head>
-        <GoogleAnalytics />
+        <Script
+          id={process.env.GTM_ID}
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-XXXXXXX');`,
+          }}
+        ></Script>
       </head>
-      <body>{children}</body>
+      <body>
+        <noscript
+          id={process.env.GTM_ID}
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        ></noscript>
+        {children}
+      </body>
     </html>
   );
 }
