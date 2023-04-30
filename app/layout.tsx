@@ -1,6 +1,5 @@
 import React from "react";
 import "./globals.css";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import { openGraphImage } from "./shared-metadata";
 import Script from "next/script";
