@@ -35,7 +35,7 @@ export default function ProfilePage() {
         <div className="flex flex-col gap-3">
           <section className="flex items-center justify-between">
             <p>아이폰(iOS)</p>
-            <a href={`${APP_STORE.ios}`}>
+            <a href={`${APP_STORE.ios}`} id="appstore-button">
               <Button type="primary" ghost>
                 앱스토어 이동
               </Button>
@@ -43,7 +43,7 @@ export default function ProfilePage() {
           </section>
           <section className="flex items-center justify-between">
             <p>갤럭시(Android)</p>
-            <a href={`${APP_STORE.android}`}>
+            <a href={`${APP_STORE.android}`} id="playstore-button">
               <Button type="primary" ghost>
                 구글 플레이스토어 이동
               </Button>
@@ -55,7 +55,7 @@ export default function ProfilePage() {
       <Card type="inner" title="✏️ 설문조사 참여하기">
         <section className="flex items-center justify-between">
           <p>여러분의 의견을 들려주세요! (약 2분 소요)</p>
-          <a href="https://forms.gle/t3P75wMmDmh2DMzz5">
+          <a href="https://forms.gle/t3P75wMmDmh2DMzz5" id="googleform-button">
             <Button type="primary" ghost>
               설문조사 링크
             </Button>

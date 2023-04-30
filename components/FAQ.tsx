@@ -1,17 +1,10 @@
 "use client";
 
-import { InfoCircleOutlined } from "@ant-design/icons";
-import { Card, Collapse, Image, Typography } from "antd";
+import { Card, Collapse, Image } from "antd";
 import Meta from "antd/es/card/Meta";
 import Title from "antd/es/typography/Title";
 
 const { Panel } = Collapse;
-
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
 
 function FAQ() {
   return (
