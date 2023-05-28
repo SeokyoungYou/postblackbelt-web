@@ -1,52 +1,51 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import { message, Upload } from "antd";
-import type { UploadChangeParam } from "antd/es/upload";
 import type { RcFile, UploadFile, UploadProps } from "antd/es/upload/interface";
 import Image from "next/image";
-
-const getBase64 = (file: RcFile): Promise<string> =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = (error) => reject(error);
-  });
+type IFile = {
+  url: string;
+  name: string;
+};
 
 export default function ShareImagePage() {
   const searchParams = useSearchParams();
   const os = searchParams.get("os");
   const email = searchParams.get("email");
 
-  const [imgFile, setImgFile] = useState("");
-  const imgRef = useRef();
+  const [selectedFile, setSelectedFile] = useState<File>();
+  const [preview, setPreview] = useState<string>("");
 
-  const saveImgFile = () => {
-    const file = imgRef.current.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = () => {
-      setImgFile(reader.result);
-    };
+  // create a preview as a side effect, whenever selected file is changed
+  useEffect(() => {
+    if (!selectedFile) {
+      setPreview("");
+      return;
+    }
+
+    const objectUrl = URL.createObjectURL(selectedFile);
+    setPreview(objectUrl);
+
+    // free memory when ever this component is unmounted
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [selectedFile]);
+
+  const onSelectFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files || e.target.files.length === 0) {
+      //   setSelectedFile();
+      return;
+    }
+
+    // I've kept this example simple by using the first image instead of multiple
+    setSelectedFile(e.target.files[0]);
   };
 
   return (
     <main className="flex flex-col">
-      <input
-        type="file"
-        accept="image/*"
-        id="profileImg"
-        onChange={saveImgFile}
-        ref={imgRef}
-      />
-      {imgFile && (
-        <img
-          src={imgFile ? imgFile : `/images/icon/user.png`}
-          alt="프로필 이미지"
-        />
-      )}
+      <input type="file" onChange={onSelectFile} />
+      {selectedFile && <img src={preview} />}
     </main>
   );
 }
