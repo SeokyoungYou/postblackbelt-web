@@ -18,14 +18,9 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import HomeIntroduction from "./_components/HomeIntroduction";
+import MyPageIntroduction from "./_components/MyPageIntroduction";
 const { Text, Title, Paragraph } = Typography;
 
-// 하단 네비게이션 기준 3개로 나눠짐 -> 상단에 똑같은 모양으로 그려주자...
-// 1. 홈화면
-// 월간 달력, 월간 메모장, 주간 리포트ㅡ 오운완 이미지 - 시간도 입력 가능
-// 일기 작성 잘 하는 방법: 일기 카테고리, 기술 카테고리 등....
-// 2. 마에페이지
-// 내 주짓수 정보 입력 - 사진도~, 파이차트, 푸시 알림
 // 3. 기술 트리
 
 export default function TipsPage() {
@@ -66,6 +61,7 @@ export default function TipsPage() {
         items={items}
       />
       {currMenuKey === navigationKey.home && <HomeIntroduction />}
+      {currMenuKey === navigationKey.myPage && <MyPageIntroduction />}
       <FloatButton.BackTop />
     </main>
   );
