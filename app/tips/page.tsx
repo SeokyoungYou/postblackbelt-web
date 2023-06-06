@@ -49,7 +49,7 @@ export default function TipsPage() {
         />
       </div>
       <section>
-        <Title level={2}>앱 사용법을 쉽게 알려드려요!</Title>
+        <Title level={3}>앱 사용법을 쉽게 알려드려요!</Title>
         <Paragraph>
           <Text>
             Post Black Belt는 주짓수 수련자를 위한{" "}
