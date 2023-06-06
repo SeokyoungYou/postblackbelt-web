@@ -2,16 +2,13 @@
 import React from "react";
 import { Anchor, Avatar, FloatButton, Segmented, Typography } from "antd";
 import Image from "next/image";
-import { navigationKey } from "../constants";
+import { whiteWrapper } from "../styles";
+import PhoneImage from "./PhoneImage";
 const { Text, Title, Paragraph } = Typography;
 
 // 1. 홈화면
 // 월간 달력, 월간 메모장, 주간 리포트ㅡ 오운완 이미지 - 시간도 입력 가능
 // 일기 작성 잘 하는 방법: 일기 카테고리, 기술 카테고리 등....
-
-type HomeIntroductionProps = {
-  menuKey: navigationKey;
-};
 
 const homeItems = [
   {
@@ -41,64 +38,44 @@ const homeItems = [
   },
 ];
 
-const HomeIntroduction: React.FC<HomeIntroductionProps> = ({ menuKey }) => {
+const HomeIntroduction = () => {
   return (
     <section>
-      <>
-        <div>
-          <Anchor direction="horizontal" items={homeItems} />
-        </div>
-        <div>
-          <div
-            id="part-1"
-            style={{
-              width: "100%",
-              height: "100vh",
-              background: "rgba(0,255,0,0.02)",
-            }}
-          />
-          <div
-            id="part-2"
-            style={{
-              width: "100%",
-              height: "100vh",
-              background: "rgba(0,0,255,0.02)",
-            }}
-          />
-          <div
-            id="part-3"
-            style={{
-              width: "100%",
-              height: "50vh",
-              background: "#FFFBE9",
-            }}
-          ></div>
-          <div
-            id="part-4"
-            style={{
-              width: "100%",
-              height: "40vh",
-              background: "#F4EAD5",
-            }}
-          />
-          <div
-            id="part-5"
-            style={{
-              width: "100%",
-              height: "100vh",
-              background: "#DAE2B6",
-            }}
-          />
-          <div
-            id="part-6"
-            style={{
-              width: "100%",
-              height: "100vh",
-              background: "#CCD6A6",
-            }}
-          />
-        </div>
-      </>
+      <Anchor direction="horizontal" items={homeItems} className="px-2" />
+      <div id="part-1" className={whiteWrapper}>
+        <Title style={{ margin: 0 }} level={4}>
+          달력 형식으로 나의 주짓수를 기록해요
+        </Title>
+        <PhoneImage src="/tips/home/home.png" alt="홈 스크린" />
+      </div>
+      <div id="part-2" className={whiteWrapper}>
+        <Title style={{ margin: 0 }} level={4}>
+          오늘 운동한 내용을 일기로 작성해요
+        </Title>
+        <PhoneImage src="/tips/home/edit-diary.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/edit-diary-tech.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/edit-diary-content.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/edit-diary-rounds.png" alt="홈 스크린" />
+      </div>
+      <div id="part-3" className={whiteWrapper}>
+        <Title style={{ margin: 0 }} level={4}>
+          오늘의 운동을 이미지로 만들어서 기억해요
+        </Title>
+        <PhoneImage src="/tips/home/today.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/today-detail.png" alt="홈 스크린" />
+      </div>
+      <div id="part-4" className={whiteWrapper}>
+        <Title style={{ margin: 0 }} level={4}>
+          메모를 확인해요
+        </Title>
+        <PhoneImage src="/tips/home/memo.png" alt="홈 스크린" />
+      </div>
+      <div id="part-5" className={whiteWrapper}>
+        <Title style={{ margin: 0 }} level={4}>
+          이번 주 기록한 일기를 정리해요
+        </Title>
+        <PhoneImage src="/tips/home/weekly.png" alt="홈 스크린" />
+      </div>
     </section>
   );
 };

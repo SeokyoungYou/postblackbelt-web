@@ -18,7 +18,6 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import HomeIntroduction from "./_components/HomeIntroduction";
-import { navigationKey } from "./constants";
 const { Text, Title, Paragraph } = Typography;
 
 // 하단 네비게이션 기준 3개로 나눠짐 -> 상단에 똑같은 모양으로 그려주자...
@@ -49,28 +48,33 @@ export default function TipsPage() {
           quality="100"
         />
       </div>
-      <Title style={{ margin: 0 }} level={4}>
-        앱 사용법을 쉽게 알려드려요!
-      </Title>
-      <Paragraph>
-        <Text>
-          Post Black Belt는 주짓수 수련자를 위한 <Text strong>개인 일기장</Text>{" "}
-          앱이에요. 오늘의 운동을 기록하고 나의 주짓수를 다양한 방법으로
-          확인하고 분석하는 방법을 알려드릴게요.
-        </Text>
-      </Paragraph>
+      <section>
+        <Title level={2}>앱 사용법을 쉽게 알려드려요!</Title>
+        <Paragraph>
+          <Text>
+            Post Black Belt는 주짓수 수련자를 위한{" "}
+            <Text strong>개인 일기장</Text> 앱이에요. 오늘의 운동을 기록하고
+            나의 주짓수를 다양한 방법으로 확인하고 분석하는 방법을 알려드릴게요.
+            세 개의 하단 네비게이션 기준으로 여러 기능들을 사용할 수 있어요.
+          </Text>
+        </Paragraph>
+      </section>
       <Menu
         onClick={onClick}
         selectedKeys={[currMenuKey]}
         mode="horizontal"
         items={items}
       />
-      {currMenuKey === navigationKey.home && (
-        <HomeIntroduction menuKey={currMenuKey} />
-      )}
+      {currMenuKey === navigationKey.home && <HomeIntroduction />}
       <FloatButton.BackTop />
     </main>
   );
+}
+
+enum navigationKey {
+  home = "홈",
+  myPage = "마이페이지",
+  techTree = "기술트리",
 }
 
 const items: MenuProps["items"] = [
