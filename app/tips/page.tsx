@@ -1,27 +1,16 @@
 "use client";
 import React from "react";
-import {
-  Avatar,
-  FloatButton,
-  Menu,
-  MenuProps,
-  Segmented,
-  Typography,
-} from "antd";
+import { FloatButton, Menu, MenuProps, Typography } from "antd";
 import Image from "next/image";
 import {
   AppstoreOutlined,
-  HomeFilled,
   HomeOutlined,
-  MailOutlined,
-  SettingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import HomeIntroduction from "./_components/HomeIntroduction";
 import MyPageIntroduction from "./_components/MyPageIntroduction";
+import TechTreeIntroduction from "./_components/TechTreeIntroduction";
 const { Text, Title, Paragraph } = Typography;
-
-// 3. 기술 트리
 
 export default function TipsPage() {
   const [currMenuKey, setMenuKey] = React.useState<navigationKey>(
@@ -62,6 +51,7 @@ export default function TipsPage() {
       />
       {currMenuKey === navigationKey.home && <HomeIntroduction />}
       {currMenuKey === navigationKey.myPage && <MyPageIntroduction />}
+      {currMenuKey === navigationKey.techTree && <TechTreeIntroduction />}
       <FloatButton.BackTop />
     </main>
   );

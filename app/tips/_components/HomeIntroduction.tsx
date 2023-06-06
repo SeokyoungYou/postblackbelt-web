@@ -1,16 +1,10 @@
 "use client";
 import React from "react";
-import { Anchor, Avatar, FloatButton, Segmented, Typography } from "antd";
-import Image from "next/image";
+import { Anchor, Typography } from "antd";
 import { whiteWrapper } from "../styles";
 import PhoneImage from "./PhoneImage";
 import Tip from "@/components/Tip";
 const { Text, Title, Paragraph } = Typography;
-
-// 1. 홈화면
-// 월간 달력, 월간 메모장, 주간 리포트ㅡ 오운완 이미지 - 시간도 입력 가능
-// 일기 작성 잘 하는 방법: 일기 카테고리, 기술 카테고리 등....
-
 const homeItems = [
   {
     key: "part-1",
@@ -62,7 +56,7 @@ const HomeIntroduction = () => {
         </Paragraph>
       </div>
       <div id="part-2" className={whiteWrapper}>
-        <PhoneImage src="/tips/home/edit-diary.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/edit-diary.png" alt="일기 작성창" />
         <Title style={{ margin: 0 }} level={4}>
           오늘의 주짓수를 월간 달력에 스탬핑해요
         </Title>
@@ -75,7 +69,10 @@ const HomeIntroduction = () => {
             기술 강의 기록, 대회 준비 등 자유로운 주제로 일기를 작성해보세요!
           </Text>
         </Paragraph>
-        <PhoneImage src="/tips/home/edit-diary-tech.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/home/edit-diary-tech.png"
+          alt="기술 카테고리가 열린 일기 작성창"
+        />
         <Title style={{ margin: 0 }} level={4}>
           작성한 일기를 기술 별로 분류해요
         </Title>
@@ -88,7 +85,10 @@ const HomeIntroduction = () => {
             일기를 작성하면 되어요.
           </Text>
         </Paragraph>
-        <PhoneImage src="/tips/home/edit-diary-content.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/home/edit-diary-content.png"
+          alt="작성창이 열린 일기 작성창"
+        />
         <Title style={{ margin: 0 }} level={4}>
           수련 내용을 일기로 작성해요
         </Title>
@@ -99,7 +99,10 @@ const HomeIntroduction = () => {
             자세히 작성해보세요!
           </Text>
         </Paragraph>
-        <PhoneImage src="/tips/home/edit-diary-rounds.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/home/edit-diary-rounds.png"
+          alt="스파링 정보, 링크 작성창이 열린 일기 작성창"
+        />
         <Title style={{ margin: 0 }} level={4}>
           스파링, 링크 정보를 추가해요
         </Title>
@@ -115,7 +118,10 @@ const HomeIntroduction = () => {
         />
       </div>
       <div id="part-3" className={whiteWrapper}>
-        <PhoneImage src="/tips/home/today.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/home/today.png"
+          alt="오늘의 주짓수 이미지 스크린"
+        />
         <Title style={{ margin: 0 }} level={4}>
           오늘의 운동을 이미지로 만들어서 기억해요
         </Title>
@@ -125,7 +131,10 @@ const HomeIntroduction = () => {
             만들 수 있어요. 벨트 정보는 마이페이지에서 수정할 수 있어요.
           </Text>
         </Paragraph>
-        <PhoneImage src="/tips/home/today-detail.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/home/today-detail.png"
+          alt="시간 지정창이 열린 오늘의 주짓수 이미지 스크린"
+        />
         <Paragraph>
           <Text>
             운동 시간을 추가로 기록하거나 일기 카테고리를 임시로 변경하는 것도
@@ -135,7 +144,7 @@ const HomeIntroduction = () => {
         </Paragraph>
       </div>
       <div id="part-4" className={whiteWrapper}>
-        <PhoneImage src="/tips/home/memo.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/memo.png" alt="월간 메모 스크린" />
         <Title style={{ margin: 0 }} level={4}>
           메모를 월별로 확인해요
         </Title>
@@ -147,7 +156,7 @@ const HomeIntroduction = () => {
         </Paragraph>
       </div>
       <div id="part-5" className={whiteWrapper}>
-        <PhoneImage src="/tips/home/weekly.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/home/weekly.png" alt="주간 리포트 스크린" />
         <Title style={{ margin: 0 }} level={4}>
           나만의 주간 주짓수 리포트를 발행해요
         </Title>

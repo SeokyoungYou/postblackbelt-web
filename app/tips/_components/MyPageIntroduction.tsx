@@ -1,14 +1,9 @@
 "use client";
 import React from "react";
-import { Anchor, Avatar, FloatButton, Segmented, Typography } from "antd";
-import Image from "next/image";
+import { Anchor, Typography } from "antd";
 import { whiteWrapper } from "../styles";
 import PhoneImage from "./PhoneImage";
-import Tip from "@/components/Tip";
 const { Text, Title, Paragraph } = Typography;
-
-// 2. 마에페이지
-// 내 주짓수 정보 입력 - 사진도~, 파이차트, 푸시 알림
 
 const homeItems = [
   {
@@ -32,48 +27,50 @@ const MyPageIntroduction = () => {
         className="px-2 bg-white"
       />
       <div id="part-1" className={whiteWrapper}>
-        <PhoneImage src="/tips/mypage/mypage.png" alt="홈 스크린" />
+        <PhoneImage src="/tips/mypage/mypage.png" alt="마이페이지 스크린" />
         <Title style={{ margin: 0 }} level={4}>
           나의 주짓수 정보를 확인해요
         </Title>
         <Paragraph>
           <Text>
-            오늘의 운동을 일기로 작성하여 <Text strong>나만의 주짓수 달력</Text>
-            을 만들어보세요. 달력을 좌우로 스와이프하여 변경할 수 있고, 특정
-            날짜를 선택하면 하단에서 작성한 일기들을 확인할 수 있어요. 이번 달
-            주짓수 기록을 한 눈에 체크해보세요.
+            주짓수를 수련하면서 기억하고 싶은 나의 정보들을 확인하는 공간이에요.
+            사용자님이 작성한 일기를 바탕으로 나의 기술 분포도도 확인할 수
+            있으니 일기를 꾸준히 작성하고 나의 주짓수 스타일을 파악해보세요!
           </Text>
         </Paragraph>
-        <PhoneImage src="/tips/mypage/edit-mypage.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/mypage/edit-mypage.png"
+          alt="내 정보 수정 스크린"
+        />
         <Title style={{ margin: 0 }} level={4}>
           나의 주짓수 정보를 작성해요
         </Title>
         <Paragraph>
           <Text>
-            오늘의 운동을 일기로 작성하여 <Text strong>나만의 주짓수 달력</Text>
-            을 만들어보세요. 달력을 좌우로 스와이프하여 변경할 수 있고, 특정
-            날짜를 선택하면 하단에서 작성한 일기들을 확인할 수 있어요. 이번 달
-            주짓수 기록을 한 눈에 체크해보세요.
+            프로필 사진, 소속, 주짓수를 시작한 날짜, 벨트 정보부터 운동 목표까지
+            다양한 정보를 입력할 수 있어요.
           </Text>
         </Paragraph>
       </div>
       <div id="part-2" className={whiteWrapper}>
-        <PhoneImage src="/tips/mypage/edit-mypage.png" alt="홈 스크린" />
+        <PhoneImage
+          src="/tips/mypage/push-noti.png"
+          alt="푸시 알림 설정 스크린"
+        />
         <Title style={{ margin: 0 }} level={4}>
-          달력 형식으로 운동 기록을 확인해요
+          운동이 끝난 후 푸시 알림을 받고 일기를 작성하세요
         </Title>
         <Paragraph>
           <Text>
-            오늘의 운동을 일기로 작성하여 <Text strong>나만의 주짓수 달력</Text>
-            을 만들어보세요. 달력을 좌우로 스와이프하여 변경할 수 있고, 특정
-            날짜를 선택하면 하단에서 작성한 일기들을 확인할 수 있어요. 이번 달
-            주짓수 기록을 한 눈에 체크해보세요.
+            마이페이지의 <Text strong>하늘색 푸시 알람</Text> 버튼을 누르면 나의
+            운동 시간에 딱 맞는 푸시 알림을 만들 수 있어요. 요일과 시간을
+            선택하여 일기 작성 알림을 받아보세요.{" "}
+            <Text type="secondary">
+              최초에 앱 알림 권한을 허용하지 않으면 기기 설정창에서 직접 알림을
+              허용해야 해요.
+            </Text>
           </Text>
         </Paragraph>
-        <Tip
-          title="메모장 활용하기"
-          description="배우고 싶은 기술이 생겼다면 메모장 카테고리를 사용하여 일기를 작성하고, Youtube나 Instagram 링크도 추가해보세요. 도장에서 해당 일기를 열어서 바로 연습하기 편할거예요."
-        />
       </div>
     </section>
   );
