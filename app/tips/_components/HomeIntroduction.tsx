@@ -57,7 +57,7 @@ const HomeIntroduction = () => {
             오늘의 운동을 일기로 작성하여 <Text strong>나만의 주짓수 달력</Text>
             을 만들어보세요. 달력을 좌우로 스와이프하여 변경할 수 있고, 특정
             날짜를 선택하면 하단에서 작성한 일기들을 확인할 수 있어요. 이번 달
-            주짓수 기록을 한눈에 체크해보세요.
+            주짓수 기록을 한 눈에 체크해보세요.
           </Text>
         </Paragraph>
       </div>
@@ -115,23 +115,49 @@ const HomeIntroduction = () => {
         />
       </div>
       <div id="part-3" className={whiteWrapper}>
+        <PhoneImage src="/tips/home/today.png" alt="홈 스크린" />
         <Title style={{ margin: 0 }} level={4}>
           오늘의 운동을 이미지로 만들어서 기억해요
         </Title>
-        <PhoneImage src="/tips/home/today.png" alt="홈 스크린" />
+        <Paragraph>
+          <Text>
+            운동한 사진에 날짜, 일기 카테고리, 나의 벨트 정보가 추가된 이미지를
+            만들 수 있어요. 벨트 정보는 마이페이지에서 수정할 수 있어요.
+          </Text>
+        </Paragraph>
         <PhoneImage src="/tips/home/today-detail.png" alt="홈 스크린" />
+        <Paragraph>
+          <Text>
+            운동 시간을 추가로 기록하거나 일기 카테고리를 임시로 변경하는 것도
+            가능히ㅐ요. 이 기능은 월간 달력에서 일기가 작성되는 날짜에{" "}
+            <Text strong>하늘색 버튼</Text>으로 활성화되어요.
+          </Text>
+        </Paragraph>
       </div>
       <div id="part-4" className={whiteWrapper}>
-        <Title style={{ margin: 0 }} level={4}>
-          메모를 확인해요
-        </Title>
         <PhoneImage src="/tips/home/memo.png" alt="홈 스크린" />
+        <Title style={{ margin: 0 }} level={4}>
+          메모를 월별로 확인해요
+        </Title>
+        <Paragraph>
+          <Text>
+            상단의 메뉴 버튼 중 <Text strong>메모장</Text>을 클릭하면 월별로
+            작성한 메모장 카테고리의 일기들을 한 눈에 확인할 수 있어요.
+          </Text>
+        </Paragraph>
       </div>
       <div id="part-5" className={whiteWrapper}>
-        <Title style={{ margin: 0 }} level={4}>
-          이번 주 기록한 일기를 정리해요
-        </Title>
         <PhoneImage src="/tips/home/weekly.png" alt="홈 스크린" />
+        <Title style={{ margin: 0 }} level={4}>
+          나만의 주간 주짓수 리포트를 발행해요
+        </Title>
+        <Paragraph>
+          <Text>
+            Post Black Belt에서는 작성된 일기를 출석 횟수, 기술트리, 대회, 승급
+            등 다양한 이벤트를 분석하고 있어요. 이번 주 주짓수를 되돌아보는
+            시간을 가져보세요!
+          </Text>
+        </Paragraph>
       </div>
     </section>
   );
