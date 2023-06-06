@@ -44,7 +44,7 @@ export default function TipsLayout({ children }: TipsLayoutProps) {
         ></noscript>
         {children}
       </body>
-      <footer className="flex items-center justify-center p-4 bg-slate-100">
+      <footer className="flex items-center justify-center p-4 bg-slate-50">
         © Post Black Belt Corp. All rights reserved.
       </footer>
     </html>
