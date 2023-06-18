@@ -33,6 +33,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         })(window,document,'script','dataLayer','${process.env.GTM_ID}');`,
           }}
         ></Script>
+        <meta
+          name="naver-site-verification"
+          content="27756d6d2f57d44f54709b1ec3f4782a5f2ab9a2"
+        />
+        <meta
+          name="google-site-verification"
+          content="lmDv_wExGfiD_OrydJeq5n2dP32irRjQUH3ZwwoK-1Y"
+        />
       </head>
       <body>
         <noscript
