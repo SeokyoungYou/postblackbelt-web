@@ -17,9 +17,9 @@ const notoSefrifDisplay = Noto_Serif_Display({
   subsets: ["latin"],
   weight: ["900"],
 });
-const merriweather = Noto_Serif_Display({
+const merriweather = Merriweather({
   subsets: ["latin"],
-  weight: ["300", "600", "700", "900"],
+  weight: ["300", "400", "700", "900"],
 });
 
 // TODO: head 잘 작성해서 SEO 들어가게 만들기
@@ -70,7 +70,7 @@ export default function Page() {
           <h2
             style={{
               fontSize: "3vw",
-              fontWeight: "600",
+              fontWeight: "700",
               whiteSpace: "pre-line",
               textAlign: "center",
             }}
@@ -109,28 +109,25 @@ export default function Page() {
             Supporting All Paths to Black Belt and Every Step Thereafter
           </span>
           <div className="flex flex-col gap-5">
-            <div className="flex justify-center gap-5">
-              <Link
-                href="/profile"
-                className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
-              >
-                <InfoCircleOutlined /> 한국어 매뉴얼 확인하기
-              </Link>
-            </div>
-            <div className="flex justify-center gap-5">
-              <a
-                href={APP_STORE.ios}
-                className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
-              >
-                <AppleFilled /> App Store Download
-              </a>
-              <a
-                href={APP_STORE.android}
-                className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
-              >
-                <GoogleOutlined /> Play Store Download
-              </a>
-            </div>
+            <Link
+              href="/profile"
+              className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
+            >
+              <InfoCircleOutlined /> 한국어 매뉴얼 확인하기
+            </Link>
+
+            <a
+              href={APP_STORE.ios}
+              className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
+            >
+              <AppleFilled /> App Store Download
+            </a>
+            <a
+              href={APP_STORE.android}
+              className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
+            >
+              <GoogleOutlined /> Play Store Download
+            </a>
           </div>
         </section>
       </main>
