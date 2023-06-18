@@ -47,7 +47,7 @@ export default function Page() {
           </h3>
         </section>
         <section className="flex flex-col items-center justify-center gap-6 p-10">
-          <div className="flex gap-6">
+          <div className="flex gap-6 overflow-x-auto ">
             <Image
               src="/tips/home/home.png"
               width={170}
