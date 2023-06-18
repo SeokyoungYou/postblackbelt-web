@@ -96,7 +96,7 @@ export default function Page() {
           sizes="100vw"
           className="w-full h-auto"
         />
-        <section className="flex flex-col items-center justify-center gap-10 p-20 bg-black">
+        <section className="flex flex-col items-center justify-center gap-10 px-10 py-20 bg-black">
           <span
             style={{
               fontSize: "4vw",
@@ -113,7 +113,7 @@ export default function Page() {
               href="/profile"
               className="flex items-center justify-center gap-3 p-4 rounded-lg bg-slate-200"
             >
-              <InfoCircleOutlined /> 한국어 매뉴얼 확인하기
+              <InfoCircleOutlined /> 한국어 정보 확인하기
             </Link>
 
             <a

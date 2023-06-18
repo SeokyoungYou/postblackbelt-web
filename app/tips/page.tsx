@@ -11,7 +11,6 @@ import HomeIntroduction from "./_components/HomeIntroduction";
 import MyPageIntroduction from "./_components/MyPageIntroduction";
 import TechTreeIntroduction from "./_components/TechTreeIntroduction";
 import MyFooter from "@/components/MyFooter";
-import { Footer } from "antd/es/layout/layout";
 const { Text, Title, Paragraph } = Typography;
 
 export default function TipsPage() {
@@ -58,7 +57,6 @@ export default function TipsPage() {
         {currMenuKey === navigationKey.techTree && <TechTreeIntroduction />}
         <FloatButton.BackTop />
       </main>
-      <Footer />
       <MyFooter />
     </>
   );
