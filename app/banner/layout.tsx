@@ -5,7 +5,7 @@ import { openGraphImage } from "../shared-metadata";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Post Black Belt 주짓수 앱 | 배너",
+  title: "Post Black Belt | 배너",
   description: "주짓수 일기 작성을 위한 모바일 앱입니다.",
   openGraph: {
     ...openGraphImage,

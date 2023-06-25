@@ -3,13 +3,20 @@ import Image from "next/image";
 import React from "react";
 
 import { Carousel } from "antd";
-
-// 상단에 배너
-// 하단에 클릭하여 앱스토어/구글플스 보내기
+import { useSearchParams } from "next/navigation";
+import { LATEST_VERSION } from "@/lib/constants";
 
 export default function BannerPage() {
+  const searchParams = useSearchParams();
+  const version = searchParams.get("version");
   return (
     <Carousel dotPosition="bottom" autoplay autoplaySpeed={5000}>
+      {version !== LATEST_VERSION && (
+        <section>
+          <div style={contentStyle}>✨ 앱을 업데이트해주세요!</div>
+        </section>
+      )}
+
       <section>
         <div style={contentStyle}>
           <div className="flex justify-center gap-1 adivgn-center">
@@ -23,9 +30,7 @@ export default function BannerPage() {
           </div>
         </div>
       </section>
-      <section>
-        <div style={contentStyle}>🔨 앱 업데이트하여 더 많은 기능 사용하기</div>
-      </section>
+
       <section>
         <div style={contentStyle}>✏️ 설문조사 참여하여 의견을 남겨주세요!</div>
       </section>
@@ -39,6 +44,6 @@ const contentStyle: React.CSSProperties = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  background: "#5E4B9C",
+  background: "#BE2A2A",
   paddingTop: "15px",
 };
