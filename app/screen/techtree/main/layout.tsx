@@ -1,22 +1,23 @@
 import React from "react";
-import "../globals.css";
-
-import { openGraphImage } from "../shared-metadata";
+import "../../../globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "일기 작성",
-  description: "Post Black Belt 주짓수 일기 앱입니다.",
+  title: "App | 테크트리 메인",
+  description: "테크트리 메인 화면",
 };
 
-type EditDiaryLayoutProps = {
+type TechtreeMainLayoutProps = {
   children: React.ReactNode;
 };
 
-export default function EditDiaryLayout({ children }: EditDiaryLayoutProps) {
+export default function TechtreeMainLayout({
+  children,
+}: TechtreeMainLayoutProps) {
   return (
     <html lang="ko">
       <head>
+        <meta name="robots" content="noindex" />
         <Script
           id={process.env.GTM_ID}
           strategy="afterInteractive"
