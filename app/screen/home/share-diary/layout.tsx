@@ -3,8 +3,8 @@ import "../../../globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "App | 일기 작성",
-  description: "일기 작성 화면",
+  title: "App | 일기 공유",
+  description: "일기 공유 화면",
 };
 
 type ShareDiaryLayoutProps = {
